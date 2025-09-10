@@ -1,0 +1,25 @@
+import time
+from machine import Pin
+led = Pin(2,Pin.OUT)
+led2 = Pin(3,Pin.OUT)
+led3 = Pin(4,Pin.OUT)
+led4 = Pin(5,Pin.OUT)
+button =Pin(6,Pin.IN, Pin.PULL_UP)
+while True:
+    if button.value() == 0:
+        led.on()
+        led2.on()
+        led3.on()
+        led4.on()
+        time.sleep(0.123)
+        led.off()
+        led2.off
+        led3.off
+        led4.off
+    else:
+        led.off()
+        led2.off()
+        led3.off()
+        led4.off()
+        time.sleep(0.123)
+
