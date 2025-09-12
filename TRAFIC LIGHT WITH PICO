@@ -1,0 +1,23 @@
+import time
+from machine import Pin
+stop = Pin(2,Pin.OUT)
+ready = Pin(3,Pin.OUT)
+go = Pin(4,Pin.OUT)
+while True:
+    stop.on()
+    print('STOP')
+    ready.off()
+    go.off()
+    time.sleep(5)
+    
+    stop.off()
+    ready.on()
+    print('READY')
+    go.off()
+    time.sleep(5)
+
+    stop.off()
+    ready.off()
+    go.on()
+    print('GO')
+    time.sleep(5)
